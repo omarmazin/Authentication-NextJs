@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import { AuthContextProvider } from './context/authContext'
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
+const metadata = {
   title: 'Authentication',
   description: 'Next js & Firebase Authentication ( Huaduf Task )',
 }
