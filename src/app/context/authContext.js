@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import { useContext, createContext,useState, useEffect } from "react";
 import {getAuth, 
