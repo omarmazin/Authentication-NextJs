@@ -12,8 +12,6 @@ import {getAuth,
 import { auth } from "../firebase";
 import Swal from "sweetalert2";
 
-
-
 const AuthContext = createContext()
 export const AuthContextProvider = ({children})=>{
   const [isLoading, setIsLoading] = useState(true);
@@ -23,6 +21,7 @@ export const AuthContextProvider = ({children})=>{
         const provider = new GoogleAuthProvider()
         signInWithPopup(auth,provider)
     }
+    
     const signUp = async (email, password,username) => {
 
         try {
@@ -45,10 +44,9 @@ export const AuthContextProvider = ({children})=>{
             showConfirmButton: false,
             timer: 1500
           })
+
           
-          
-          
-        //   setError(null); // Clear any previous errors
+      
         } catch (error) {
           if (error.code === "auth/email-already-in-use") {
             alert("Email is already in use. Please use a different email.");
@@ -99,9 +97,9 @@ export const AuthContextProvider = ({children})=>{
           >Loading ...</p>
       </div>
       );
-    }else if(!user === null){
-      return
+      
     }
+
   
     return(
         <AuthContext.Provider value={{user,googleSignIn,logOut, signUp,signIn}}>{children}</AuthContext.Provider>
