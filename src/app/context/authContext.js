@@ -44,6 +44,7 @@ export const AuthContextProvider = ({children})=>{
             showConfirmButton: false,
             timer: 1500
           })
+          window.location.href = "/"
 
           
       
