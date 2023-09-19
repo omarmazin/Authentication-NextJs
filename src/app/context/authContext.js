@@ -1,5 +1,6 @@
-/* eslint-disable react-hooks/rules-of-hooks */
+
 "use client";
+import React from "react";
 import { useContext, createContext,useState, useEffect } from "react";
 import {getAuth, 
   updateProfile,signInWithPopup,
@@ -9,9 +10,7 @@ import {getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import Link from "next/link";
 import Swal from "sweetalert2";
-import Login from "../page";
 
 
 
@@ -47,7 +46,6 @@ export const AuthContextProvider = ({children})=>{
             timer: 1500
           })
           
-          window.location.href = "/"
           
           
         //   setError(null); // Clear any previous errors
