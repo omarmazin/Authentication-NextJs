@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+/* Disable Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: #FFFFFF; /* Light background color */
+      color: #000000; /* Light text color */
+  }
+}
